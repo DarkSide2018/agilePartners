@@ -28,13 +28,11 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
     implementation ("io.github.microutils:kotlin-logging-jvm:2.0.10")
     testImplementation(kotlin("test-junit"))
-    testImplementation("org.springframework.boot:spring-boot-starter-test") {
-        exclude(module = "junit")
-        exclude(module = "mockito-core")
-    }
-    testImplementation("org.junit.jupiter:junit-jupiter-api")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
-    testImplementation("com.ninja-squad:springmockk:3.0.1")
+    testImplementation("org.mockito:mockito-junit-jupiter:3.11.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.2")
+    testImplementation("org.mockito:mockito-core:3.11.2")
+    testImplementation("io.mockk:mockk:1.12.0")
+
 }
 tasks.withType<KotlinCompile> {
     kotlinOptions {
